@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { cssreset } from '../components/CSSRESET'
 import Menu from '../components/Menu'
 import { StyledTimeline } from '../components/Timeline'
+import { StyledFavorites } from '../components/Favoritos'
 
 function HomePage() {
   const StyleHomePage = {
@@ -15,6 +16,7 @@ function HomePage() {
         <Menu />
         <Header />
         <Timeline playlists={config.playlists} />
+        <Favoritos favoritos={config.favoritos} />
       </div>
     </>
   )
@@ -23,7 +25,7 @@ function HomePage() {
 export default HomePage
 
 const StyledHeader = styled.div`
-  img {
+  .imgUser {
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -36,14 +38,25 @@ const StyledHeader = styled.div`
     padding: 16px 32px;
     gap: 16px;
   }
-`
 
+  .banner {
+    width: 100%;
+    height: 45vh;
+    object-fit: cover;
+  }
+`
 function Header() {
   return (
     <StyledHeader>
-      {/*<img src="Banner" />*/}
+      <img
+        className="banner"
+        src={`https://images.unsplash.com/photo-${config.banner}`}
+      />
       <section className="user_info">
-        <img src={`https://github.com/${config.github}.png`} />
+        <img
+          className="imgUser"
+          src={`https://github.com/${config.github}.png`}
+        />
         <div>
           <h2>{config.name}</h2>
           <p>{config.job}</p>
@@ -81,5 +94,33 @@ function Timeline(propriedades) {
         )
       })}
     </StyledTimeline>
+  )
+}
+
+function Favoritos(props) {
+  const listFavoritos = Object.keys(props.favoritos)
+
+  return (
+    <StyledFavorites>
+      {listFavoritos.map(listFavoritos => {
+        const canais = props.favoritos[listFavoritos]
+        console.log(canais)
+        return (
+          <section>
+            <h2>{listFavoritos}</h2>
+            <div>
+              {canais.map(canais => {
+                return (
+                  <a href={canais.urlUser}>
+                    <img src={canais.imgUser} />
+                    <span>{canais.nameUser}</span>
+                  </a>
+                )
+              })}
+            </div>
+          </section>
+        )
+      })}
+    </StyledFavorites>
   )
 }

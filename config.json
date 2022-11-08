@@ -1,7 +1,29 @@
 {
-  "name": "Mario Souto (DevSoutinho)",
-  "job": "Lead Software Engineer",
-  "github": "omariosouto",
+  "name": "Gabriel Araujo (GrauHBx)",
+  "job": "FrontEnd Developer",
+  "github": "GabrielMontAraujo",
+  "banner": "1579566346927-c68383817a25?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+
+  "favoritos": { "Canais Recomendados":[
+    {
+        "imgUser":"https://yt3.ggpht.com/m8Yrqf0Y81L4mZ1Cq7rGnJ4NDHe6729rxiFZvWyy9-xd_Z7Osmza7J8NWpN1axMHcCb1oKJNgA=s88-c-k-c0x00ffffff-no-rj",
+        "nameUser":"Mario Souto - Dev Soutinho",
+        "urlUser":"https://www.youtube.com/c/DevSoutinho"
+    },
+    {
+        "imgUser":"https://yt3.ggpht.com/_RMeq3r3HuMP8-_z2VPgUF50GlCiO4q9cAN-lSdKjWFEHp0tkXrhYxuqcL9ncscgC5yvAmKJfA=s88-c-k-c0x00ffffff-no-rj",
+        "nameUser":"Pedro Marins",
+        "urlUser":"https://www.youtube.com/c/opedromarins"
+    },
+    {
+        "imgUser":"https://yt3.ggpht.com/ytc/AMLnZu87BBNKm1OmB2c6R3kdHdsAIpaKIXAQ9AMTPm-g=s88-c-k-c0x00ffffff-no-rj",
+        "nameUser":"HardBorges",
+        "urlUser":"https://www.youtube.com/channel/UCh5k0c8Q6bJFcHpKQumfNrw"
+    }
+]},
+
+
+
   "playlists": {
     "jogos": [
         {
