@@ -1,7 +1,7 @@
 import config from '../config.json'
 import styled from 'styled-components'
-import { cssreset } from '../components/CSSRESET'
-import Menu from '../components/Menu'
+import { CSSReset } from '../components/CSSRESET'
+import Menu from '../components/Menu/Menu'
 import { StyledTimeline } from '../components/Timeline'
 import { StyledFavorites } from '../components/Favoritos'
 
@@ -11,7 +11,7 @@ function HomePage() {
   }
   return (
     <>
-      <cssreset />
+      <CSSReset />
       <div style={StyleHomePage}>
         <Menu />
         <Header />
@@ -75,10 +75,10 @@ function Timeline(propriedades) {
     <StyledTimeline>
       {playlistNames.map(playlistName => {
         const videos = propriedades.playlists[playlistName]
-        console.log(playlistName)
-        console.log(videos)
+        //console.log(playlistName)
+        //console.log(videos)
         return (
-          <section>
+          <section key={playlistName}>
             <h2>{playlistName}</h2>
             <div>
               {videos.map(video => {
